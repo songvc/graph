@@ -1,0 +1,35 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "license": "MIT",
+  "private": true,
+  "proxy": "http://localhost:3001",
+  "dependencies": {
+    "d3": "^6.2.0",
+    "d3-axis": "^2.0.0",
+    "d3-geo": "^2.0.1",
+    "d3-scale": "^3.2.3",
+    "d3-shape": "^2.0.0",
+    "d3-time-format": "^3.0.0",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.4",
+    "react-worker": "^1.0.0",
+    "semantic-ui-calendar-react": "^0.15.3",
+    "semantic-ui-css": "^2.3.1",
+    "semantic-ui-react": "^0.80.0",
+    "styled-components": "^5.2.0",
+    "topojson-client": "^3.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "standard": "^11.0.1",
+    "typescript": "^4.0.3"
+  }
+}
