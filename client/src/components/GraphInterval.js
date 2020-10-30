@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { scaleLinear, scaleTime, extent } from 'd3';
 import { line, area, curveCatmullRom } from 'd3-shape';
 import { parserMap, formatMap } from '../utils/utils';
@@ -57,11 +57,17 @@ const Xaxis = (props) => {
 }
 
 const Brush = (props) => {
-  const { width, height, domain, range, margin, setStart, setEnd } = props;
+  const { width, height, domain, range, margin, start, end, setStart, setEnd } = props;
 
   const xScale = scaleTime().domain(domain).range(range);
+  const startPixel = xScale(start);
+  const endPixel = xScale(end);
   const [selection, setSelection] = useState({ x: null, y: margin.top, w: null, h: height - margin.top - margin.bottom });
   const [move, setMove] = useState(null);
+
+  useEffect(() => {
+    setSelection({x: startPixel, y: margin.top, w: endPixel - startPixel , h: height - margin.top- margin.bottom })
+  }, [startPixel, endPixel])
 
   const handleonPointerMove = (e) => {
 

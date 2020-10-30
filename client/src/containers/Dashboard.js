@@ -202,7 +202,6 @@ const DashboardController = () => {
                     <Grid.Column>
                         {mergedTable && mergedTable.length > 0 ? <Graph {...GraphProps} /> : <Loading />}
                         {mergedTable && mergedTable.length > 0 ? <GraphInterval {...GraphIntervalProps} /> : <Loading />}
-
                     </Grid.Column>
                     <Grid.Column>
                         {hash && Object.keys(hash).length > 0 ? <TotalGraph {...TotalGraphProps} /> : <Loading />}

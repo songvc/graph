@@ -14,7 +14,6 @@ const Xaxis = (props) => {
       xOffset: xScale(value)
     }))
 
-  console.log('TOTAL graph xaxis ticks', ticks);
   return (
     <svg>
       <path
